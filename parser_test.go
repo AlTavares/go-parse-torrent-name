@@ -91,6 +91,7 @@ var testData = []string{
 	"The.Secret.Life.of.Pets.2016.HDRiP.AAC-LC.x264-LEGi0N",
 	"[HorribleSubs] Clockwork Planet - 10 [480p].mkv",
 	"[HorribleSubs] Detective Conan - 862 [1080p].mkv",
+	"Power 2014 S05E04 WEB H264-DEFLATE [eztv]",
 }
 
 func TestParser(t *testing.T) {
@@ -128,7 +129,7 @@ func TestParser(t *testing.T) {
 		}
 
 		if !reflect.DeepEqual(*tor, want) {
-			t.Errorf("test %v: wrong result for %q\nwant:\n  %v\ngot:\n  %v", i, fname, want, *tor)
+			t.Errorf("test %v: wrong result for %q\nwant:\n  %#v\ngot:\n  %#v", i, fname, want, *tor)
 			continue
 		}
 	}
